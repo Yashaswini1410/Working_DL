@@ -1,6 +1,6 @@
 {
     "DATA": "cells",
-    "MODEL": "GreenResNet",
+    "MODEL": "ResNet18",
     "DATA_PATH": "/kaggle/input/datasets/yashaswinikushi/dataset",
     "CHANNELS": 3,
     "NUM_CLASSES": 8,
