@@ -1,12 +1,14 @@
 {
-       "DATA": "cells",
-       "DATA_PATH": "/kaggle/input/datasets/yashaswinikushi/dataset",
-       "MODEL": "ResNet18",
-       "CHANNELS": 3,
-       "NUM_CLASSES": 8,
-       "BATCH_SIZE": 64,
-       "LEARNING_RATE": 0.001,
-       "EPOCHS": 20,
-       "DROP_RATE": 0.5,
-       "ACTIVATION": "ReLU"
-   }
+    "DATA": "cells",
+    "MODEL": "ResNet18",
+    "DATA_PATH": "/kaggle/input/datasets/yashaswinikushi/dataset",
+    "CHANNELS": 3,
+    "NUM_CLASSES": 8,
+    "BATCH_SIZE": 64,
+    "LEARNING_RATE": 0.001,
+    "EPOCHS": 20,
+    "DROP_RATE": 0.5,
+    "ACTIVATION": "ReLU",
+    "DATASETS": ["cells", "chest", "lesions", "orgs"],
+    "MODELS": ["AlexNet", "VGG16", "ResNet18"]
+}
