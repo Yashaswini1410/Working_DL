@@ -1,8 +1,8 @@
 """
 benchmark_green.py  -  Task 2 (Green Initiative) efficiency runner.
 
-Separate from the Task 1 benchmark.py. It trains the baseline ResNet18 and the
-downscaled GreenResNet on every dataset and logs, per run:
+Separate from the Task 1 benchmark.py. It trains every model (AlexNet, VGG16,
+ResNet18, GreenResNet) on every dataset and logs, per run:
     (i)   total training runtime
     (ii)  inference latency per sample
     (iii) peak memory during training and during inference
@@ -26,7 +26,7 @@ from models_green import GreenResNet
 from fit import Trainer
 
 # Task 2 compares the baseline against its green version only.
-GREEN_MODELS = ["ResNet18", "GreenResNet"]
+PROFILE_MODELS = ["AlexNet", "VGG16", "ResNet18", "GreenResNet"]
 
 
 def get_model_class(name):
@@ -114,7 +114,7 @@ def main():
         in_channels = train_loader.dataset.tensors[0].shape[1]
         num_classes = int(train_loader.dataset.tensors[1].max()) + 1
 
-        for model_name in GREEN_MODELS:
+        for model_name in PROFILE_MODELS:
             print(f"\n=== {model_name} on {data} ===")
 
             model_class = get_model_class(model_name)
